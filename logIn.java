@@ -1,7 +1,10 @@
 import javax.swing.JFrame;
 
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 import javax.swing.*;
@@ -24,6 +27,17 @@ public class logIn extends JFrame {
         add(password);
         JButton submitLogin = new JButton("Ingresar");
         submitLogin.setBounds(150, 300, 150, 70);
+        submitLogin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    enterAccount(user.getText(), password.getText());
+                } catch (IOException a) {
+                    a.printStackTrace();
+                }
+            }
+        });
+
         add(submitLogin);
         setVisible(true);
     }
@@ -32,14 +46,18 @@ public class logIn extends JFrame {
         String file = "C:\\Users\\danyb\\Desktop\\GitHub\\Class\\ProyectoRedditGrafico\\docs\\usuarios.daniel";
         File f = new File(file);
         Scanner src = new Scanner(f);
-
         while (src.hasNext()) {
             String line = src.nextLine();
             String[] parts = line.split(",");
             if (parts[0].equals(user) && parts[1].equals(contra)) {
-                // falta mucho codigo
-                break;
+                System.out.println("hola");
+                return;
             }
         }
+        System.out.println("No se encontro el usuario");
+        JLabel noEncontrado = new JLabel("No se encontro el usuario");
+        noEncontrado.setBounds(0, 0, 300, 50);
+        add(noEncontrado);
+        setVisible(true);
     }
 }

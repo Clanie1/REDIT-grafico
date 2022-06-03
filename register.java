@@ -30,7 +30,9 @@ public class register extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    registerUser("clanie1", "1780");
+                    String usuario = userRegister.getText();
+                    String contra = passwordRegister.getText();
+                    registerUser(usuario, contra);
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
