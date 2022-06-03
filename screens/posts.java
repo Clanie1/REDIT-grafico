@@ -1,7 +1,16 @@
+<<<<<<< HEAD:posts.java
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
+=======
+package screens;
+
+import javax.swing.JFrame;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.*;
+>>>>>>> f63886e657dc5c95591bc8058870ec0b9800a14a:screens/posts.java
 
 public class posts {
     String file = "..//docs//publicaciones.daniel";

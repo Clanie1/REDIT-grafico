@@ -1,3 +1,5 @@
+package screens;
+
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileWriter;
@@ -17,19 +19,19 @@ public class register extends JFrame {
         add(titulo);
 
         JLabel user = new JLabel("User");
-        user.setBounds(250, 160, 100, 50);
+        user.setBounds(50, 160, 100, 50);
         add(user);
 
         JTextArea userRegister = new JTextArea("");
-        userRegister.setBounds(250, 200, 150, 50);
+        userRegister.setBounds(50, 200, 150, 50);
         add(userRegister);
 
         JLabel password = new JLabel("Password");
-        password.setBounds(50, 160, 100, 50);
+        password.setBounds(250, 160, 100, 50);
         add(password);
 
         JTextArea passwordRegister = new JTextArea("");
-        passwordRegister.setBounds(50, 200, 150, 50);
+        passwordRegister.setBounds(250, 200, 150, 50);
         add(passwordRegister);
 
         JButton submitRegister = new JButton("Crear cuenta");
@@ -38,7 +40,9 @@ public class register extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    registerUser("clanie1", "1780");
+                    String usuario = userRegister.getText();
+                    String contra = passwordRegister.getText();
+                    registerUser(usuario, contra);
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }

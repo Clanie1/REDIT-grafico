@@ -1,3 +1,5 @@
+package screens;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -14,6 +16,12 @@ public class Account extends JFrame {
 
         JButton LogInBtn = new JButton("Log In");
         LogInBtn.setBounds(50, 300, 150, 70);
+        LogInBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                logIn cosa = new logIn();
+            }
+        });
         add(LogInBtn);
 
         JButton RegisterBtn = new JButton("Register");
