@@ -1,8 +1,10 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Post {
 
-<<<<<<< HEAD
-}
-=======
     public String user = ".//docs//usuarios.daniel";
     Scanner scn;
 
@@ -16,4 +18,3 @@ public class Post {
         fw.close();
     }
 }
->>>>>>> dc0adbe7464954281f50c5144a325c4756fd8736
