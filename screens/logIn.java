@@ -45,7 +45,7 @@ public class logIn extends JFrame {
     }
 
     public void enterAccount(String user, String contra) throws FileNotFoundException {
-        String file = "..//docs//usuarios.daniel";
+        String file = "C:\\Users\\danyb\\Desktop\\GitHub\\Class\\ProyectoRedditGrafico\\docs\\usuarios.daniel";
         File f = new File(file);
         Scanner src = new Scanner(f);
         while (src.hasNext()) {
@@ -53,9 +53,16 @@ public class logIn extends JFrame {
             String[] parts = line.split(",");
             if (parts[0].equals(user) && parts[1].equals(contra)) {
                 System.out.println("hola");
+                JOptionPane.showMessageDialog(null, "Sesion iniciada");
+                setVisible(false);
                 return;
             }
         }
+        JLabel error = new JLabel("Usuario o contraseña incorrectos");
+        error.setBounds(150, 400, 300, 50);
+        add(error);
+        setVisible(true);
+        JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
         System.out.println("No se encontro el usuario");
     }
 }
