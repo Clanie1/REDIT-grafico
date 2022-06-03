@@ -43,7 +43,7 @@ public class logIn extends JFrame {
     }
 
     public void enterAccount(String user, String contra) throws FileNotFoundException {
-        String file = "C:\\Users\\danyb\\Desktop\\GitHub\\Class\\ProyectoRedditGrafico\\docs\\usuarios.daniel";
+        String file = "..//docs//usuarios.daniel";
         File f = new File(file);
         Scanner src = new Scanner(f);
         while (src.hasNext()) {

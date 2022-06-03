@@ -13,14 +13,22 @@ public class register extends JFrame {
         setLayout(null);
 
         JLabel titulo = new JLabel("Registro");
-        titulo.setBounds(150, 100, 300, 50);
+        titulo.setBounds(200, 100, 300, 50);
         add(titulo);
 
-        JTextArea userRegister = new JTextArea("User");
+        JLabel user = new JLabel("User");
+        user.setBounds(250, 160, 100, 50);
+        add(user);
+
+        JTextArea userRegister = new JTextArea("");
         userRegister.setBounds(250, 200, 150, 50);
         add(userRegister);
 
-        JTextArea passwordRegister = new JTextArea("Password");
+        JLabel password = new JLabel("Password");
+        password.setBounds(50, 160, 100, 50);
+        add(password);
+
+        JTextArea passwordRegister = new JTextArea("");
         passwordRegister.setBounds(50, 200, 150, 50);
         add(passwordRegister);
 
