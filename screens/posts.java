@@ -1,16 +1,10 @@
-<<<<<<< HEAD:posts.java
+
+package screens;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
-=======
-package screens;
-
-import javax.swing.JFrame;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.*;
->>>>>>> f63886e657dc5c95591bc8058870ec0b9800a14a:screens/posts.java
 
 public class posts {
     String file = "..//docs//publicaciones.daniel";
@@ -27,7 +21,10 @@ public class posts {
             f.createNewFile();
         } else {
             while (sc.hasNextLine()) {
-
+                Nombre = sc.nextLine();
+                Hora = sc.nextLine();
+                Titulo = sc.nextLine();
+                Contenido = sc.nextLine();
             }
         }
     }
