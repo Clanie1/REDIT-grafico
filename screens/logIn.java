@@ -1,3 +1,5 @@
+package screens;
+
 import javax.swing.JFrame;
 
 import java.awt.event.ActionListener;
@@ -19,11 +21,11 @@ public class logIn extends JFrame {
         add(ingrese);
 
         JTextArea user = new JTextArea("User");
-        user.setBounds(250, 200, 150, 50);
+        user.setBounds(50, 200, 150, 50);
         add(user);
 
         JTextArea password = new JTextArea("Password");
-        password.setBounds(50, 200, 150, 50);
+        password.setBounds(250, 200, 150, 50);
         add(password);
         JButton submitLogin = new JButton("Ingresar");
         submitLogin.setBounds(150, 300, 150, 70);
@@ -55,9 +57,5 @@ public class logIn extends JFrame {
             }
         }
         System.out.println("No se encontro el usuario");
-        JLabel noEncontrado = new JLabel("No se encontro el usuario");
-        noEncontrado.setBounds(0, 0, 300, 50);
-        add(noEncontrado);
-        setVisible(true);
     }
 }
